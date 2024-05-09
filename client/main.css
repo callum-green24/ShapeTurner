@@ -8,3 +8,11 @@ body {
   font-family: 'Poppins', sans-serif;
   transform: scale(0.5);
 }
+.image {
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  transition: all 0.75s 0.25;
+  transform: rotate();
+}
