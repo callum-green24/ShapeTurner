@@ -1,5 +1,9 @@
 body {
-  background-color: #faf8f1;
+  display: flex;
+  background-image: url('./images/background.jpg');
+  max-width: 100%;
+  margin: 1px;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  transform: scale(0.5);
 }
