@@ -1,6 +1,7 @@
 body {
   display: flex;
   background-image: url('./images/background.jpg');
+  background-size: cover;
   max-width: 100%;
   margin: 1px;
   color: #0a1520;
