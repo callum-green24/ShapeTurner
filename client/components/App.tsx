@@ -1,8 +1,11 @@
+import Input from './Input'
+
 function App() {
   return (
     <div>
-      <h1>App</h1>
-      <p>React development has begun!</p>
+      <h1>the coolest shape spinner</h1>
+      <h2>you wanna be cooool? then spin the shapes</h2>
+      <Input />
     </div>
   )
 }
