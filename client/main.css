@@ -1,5 +1,25 @@
 body {
-  background-color: #faf8f1;
+  display: flex;
+  background-image: url('./images/background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 1px;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  transform: scale(0.5);
+}
+#image {
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  transition: all 0.75s 0.25;
+  transform: rotate();
+}
+
+#container {
+  display: flex;
+  max-height: auto;
 }
