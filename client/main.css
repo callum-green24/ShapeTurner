@@ -16,3 +16,7 @@ body {
   transition: all 0.75s 0.25;
   transform: rotate();
 }
+
+#container {
+  display: flex;
+}
