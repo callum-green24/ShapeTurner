@@ -1,13 +1,16 @@
 import { useState } from 'react'
+interface Props {
+  angle: number
+}
 
-function Spinner() {
-  const [rotation, setRotation] = useState(0)
+function Spinner(props: Props) {
+  const [angle, setAngle] = useState(0)
 
   const rotateImage = (direction: string) => {
     if (direction === 'clockwise') {
-      setRotation(rotation + 45)
+      setAngle(angle + props.angle)
     } else {
-      setRotation(rotation - 45)
+      setAngle(angle - props.angle)
     }
   }
 
@@ -16,7 +19,7 @@ function Spinner() {
       <img
         src="./client/images/stop.png"
         alt="Spinner"
-        style={{ transform: `rotate(${rotation}deg)` }}
+        style={{ transform: `rotate(${angle}deg)` }}
         onClick={() => rotateImage('clockwise')}
         onContextMenu={(e) => {
           e.preventDefault()

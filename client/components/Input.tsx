@@ -1,37 +1,34 @@
 import { useState } from 'react'
 
-function Input() {
-  const [rotateAngle, setRotateAngle] = useState(1)
+interface Props {
+  angle: number
+  setAngle(angle: number): void
+}
 
-  const handleRotation = (newRotation: number) => {
-    setRotateAngle(newRotation)
-  }
-
+function Input(props: Props) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log('handleChange', event.target.value)
     if (Number(event.target.value) > 360)
       return alert('Angle is not between 0 and 360')
-
-    setRotateAngle(Number.parseInt(event.target.value))
+    props.setAngle(Number(event.target.value))
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log('handleSubmit', rotateAngle)
-    setRotateAngle(1)
+    console.log('handleSubmit', props.angle)
   }
 
   return (
     <>
       <div id="form">
-        <p>{rotateAngle}</p>
+        <p>{props.angle}</p>
         <form onSubmit={handleSubmit}>
           <input
             onChange={handleChange}
             type="number"
             name="angle"
             id="angle"
-            value={rotateAngle}
+            value={props.angle}
           />
           <button type="submit">Submit</button>
         </form>

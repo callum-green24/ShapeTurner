@@ -8,7 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
   transform: scale(0.5);
 }
-.image {
+#image {
   justify-content: center;
   align-items: center;
   width: 100px;
