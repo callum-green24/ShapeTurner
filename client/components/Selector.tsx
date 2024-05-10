@@ -1,13 +1,16 @@
 import { useState } from 'react'
+import App from './App'
 
 function Selector() {
-  const [selectedImage, setSelectedImage] = useState('')
+  const [selectedImage, setSelectedImage] = useState(0)
+  const images = ['./client/images/triaangle2.png', './client/images/stop.png']
+
   const changeImage = (imageName) => {
     console.log(selectedImage)
     setSelectedImage(
-      imageName === './images/triaangle2.png'
-        ? '..]/images/stop.png'
-        : '../images/triaangle2.png',
+      imageName == './client/images/triaangle2.png'
+        ? './client/images/stop.png'
+        : './client/images/triaangle2.png',
     )
   }
 
@@ -20,20 +23,6 @@ function Selector() {
       <div>
         <img id="image" src={selectedImage} alt="" />
       </div>
-      {/* <button
-        type="button"
-        id="triangle"
-        onClick={() => changeImage('../images/triaangle2.png')}
-      >
-        triaangle2
-      </button>
-      <button
-        type="button"
-        id="octogon"
-        onClick={() => changeImage('../images/stop.png')}
-      >
-        stop
-      </button> */}
     </div>
   )
 }

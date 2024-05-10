@@ -1,8 +1,10 @@
 body {
   display: flex;
   background-image: url('./images/background.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   max-width: 100%;
+  overflow-x: hidden;
   margin: 1px;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
@@ -19,4 +21,5 @@ body {
 
 #container {
   display: flex;
+  max-height: auto;
 }
