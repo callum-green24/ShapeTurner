@@ -1,16 +1,19 @@
 import { useState } from 'react'
-interface Props {
-  angle: number
-}
+import App from './App'
 
-function Spinner(props: Props) {
-  const [angle, setAngle] = useState(0)
+// interface Props {
+//   angle: number
+//   setAngle(): void
+// }
+
+function Spinner({ angle, setAngle }) {
+  // const [angle, setAngle] = useState(0)
 
   const rotateImage = (direction: string) => {
     if (direction === 'clockwise') {
-      setAngle(angle + props.angle)
+      setAngle(angle + 45)
     } else {
-      setAngle(angle - props.angle)
+      setAngle(angle - 45)
     }
   }
 

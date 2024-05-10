@@ -4,7 +4,9 @@ import Selector from './Selector'
 import Spinner from './Spinner'
 
 function App() {
-  const [angle, setAngle] = useState(45)
+  const [angle, setAngle] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(0)
+  // const images = ['./client/images/triaangle2.png', './client/images/stop.png']
 
   return (
     <>
@@ -13,9 +15,9 @@ function App() {
       <div id="container">
         <div>
           <Input angle={angle} setAngle={setAngle} />
-          <Selector />
+          <Selector image={selectedImage} />
         </div>
-        <Spinner angle={angle} />
+        <Spinner angle={angle} setAngle={setAngle} xxx={selectedImage} />
       </div>
     </>
   )
