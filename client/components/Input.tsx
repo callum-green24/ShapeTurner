@@ -23,17 +23,19 @@ function Input() {
 
   return (
     <>
-      <p>{rotateAngle}</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={handleChange}
-          type="number"
-          name="angle"
-          id="angle"
-          value={rotateAngle}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div id="form">
+        <p>{rotateAngle}</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            onChange={handleChange}
+            type="number"
+            name="angle"
+            id="angle"
+            value={rotateAngle}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </>
   )
 }
