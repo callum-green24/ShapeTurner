@@ -1,3 +1,5 @@
+This was my first group project while at Dev Academy
+
 # React Boilerplate
 
 ## Packages Included
